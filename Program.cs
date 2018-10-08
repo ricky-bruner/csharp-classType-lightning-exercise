@@ -18,29 +18,29 @@ namespace Library
             book1.ISBN = "9780439136358";
 
             Book book2 = new Book();
-            book1.Title = "Harry Potter and the Goblet of Fire";
-            book1.Author = "J.K. Rowling";
-            book1.ISBN = "0439139597";
+            book2.Title = "Harry Potter and the Goblet of Fire";
+            book2.Author = "J.K. Rowling";
+            book2.ISBN = "0439139597";
 
             Book book3 = new Book();
-            book1.Title = "Harry Potter and the Order of the Phoenix";
-            book1.Author = "J.K. Rowling";
-            book1.ISBN = "9780439358064";
+            book3.Title = "Harry Potter and the Order of the Phoenix";
+            book3.Author = "J.K. Rowling";
+            book3.ISBN = "9780439358064";
             
             Book book4 = new Book();
-            book1.Title = "Harry Potter and the Half-Blood Prince";
-            book1.Author = "J.K. Rowling";
-            book1.ISBN = "0439784549";
+            book4.Title = "Harry Potter and the Half-Blood Prince";
+            book4.Author = "J.K. Rowling";
+            book4.ISBN = "0439784549";
 
             Book book5 = new Book();
-            book1.Title = "Harry Potter and the Deathly Hallows";
-            book1.Author = "J.K. Rowling";
-            book1.ISBN = "043978454912234";
+            book5.Title = "Harry Potter and the Deathly Hallows";
+            book5.Author = "J.K. Rowling";
+            book5.ISBN = "043978454912234";
 
             Book book6 = new Book();
-            book1.Title = "Harry Potter and the Chamber of Secrets";
-            book1.Author = "J.K. Rowling";
-            book1.ISBN = "0439784549907865832";
+            book6.Title = "Harry Potter and the Chamber of Secrets";
+            book6.Author = "J.K. Rowling";
+            book6.ISBN = "0439784549907865832";
 
             List<Book> books = new List<Book>(){
                 book5, book6
@@ -57,7 +57,14 @@ namespace Library
             // foreach (Book book in potterBooks){
             //     Console.WriteLine($"This book is {book.Title} by {book.Author}!")
             // }
-            
+
+            if(potterBooks.IsAvailable(book5.ISBN))
+            {
+                Console.WriteLine($"{book5.Title} is available for checkout");
+            } else
+            {
+                Console.WriteLine($"{book5.Title} is not available");
+            }
         }
     }
 }
